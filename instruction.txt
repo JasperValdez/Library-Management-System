@@ -1,0 +1,10 @@
+📚 3. Library Management System
+Abstract class: LibraryItem
+
+Subclasses: Book, Magazine, DVD
+
+Features:
+Borrow/return items
+Due date and late fees
+Track who borrowed what
+Show available inventory
