@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from datetime import datetime, timedelta
 
+#------------JASPER VALDEZ------------#
 # Abstract class: LibraryItem
 class LibraryItem(ABC):
     def __init__(self, title):
@@ -14,6 +15,7 @@ class LibraryItem(ABC):
     def get_type(self):
         pass
 
+#------------LIU ARBY GARCIA------------#
     def borrow(self, borrower_name, borrow_date=None):
         if self.is_borrowed:
             print(f"'{self.title}' is already borrowed.")
@@ -42,6 +44,8 @@ class LibraryItem(ABC):
             self.due_date = None
             self.borrow_date = None
             self.is_borrowed = False
+            
+#------------RON CACHOLA------------#
 
     def status(self):
         if self.is_borrowed:
@@ -62,7 +66,9 @@ class Magazine(LibraryItem):
 class DVD(LibraryItem):
     def get_type(self):
         return "DVD"
-
+    
+    
+#------------KEN REYES------------#
 # Library class
 class Library:
     def __init__(self):
@@ -76,6 +82,7 @@ class Library:
             print(item.status())
 
 
+#------------ARSENIO LARANANG------------#
 lib = Library()
 lib.add_item(Book("Python Programming"))
 lib.add_item(Magazine("Tech Monthly"))
@@ -96,6 +103,7 @@ print("------ INVENTORY AFTER BORROWING ------")
 lib.show_inventory()
 print()
 
+#------------KHRYZ ALABADO------------#
 # Return items
 print("------ RETURNING ITEMS ------")
 lib.items[0].return_item(datetime(2025, 5, 10))  
